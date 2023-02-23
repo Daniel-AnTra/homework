@@ -13,8 +13,8 @@ class calculator:
 obj1 = calculator()
 choice = 1
 while choice != 0:
-        x = int(input("Enter the first number: ")) 
-        y = int(input("Enter the second number: "))
+        x = float(input("Enter the first number: ")) 
+        y = float(input("Enter the second number: "))
         print ("1. Addition")
         print ("2. Substraction")
         print ("3. Multiplication")
@@ -38,8 +38,8 @@ while choice != 0:
             
         if  yesno == "yes":
             while choice != 0:
-                x = int(input("Enter the first number: ")) 
-                y = int(input("Enter the second number: "))
+                x = float(input("Enter the first number: ")) 
+                y = float(input("Enter the second number: "))
                 print ("1. Addition")
                 print ("2. Substraction")
                 print ("3. Multiplication")
