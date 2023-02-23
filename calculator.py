@@ -6,8 +6,10 @@ class calculator:
     def multiplication(self):       
         return (x * y)
     def division(self):
-        return (x / y) 
-
+        if y != 0:
+            return (x / y) 
+        else:
+            print("You can't divide by 0")
 obj1 = calculator()
 choice = 1
 while choice != 0:
@@ -20,21 +22,21 @@ while choice != 0:
         choice = int(input("Enter your choice of operation : "))
         if choice == 1:
             print("The result is " + str(obj1.addition()))
-            yesno = str(input("Do you want new caluclation : press y/n "))
+            yesno = str(input("Do you want new caluclation : press yes/no "))
         elif choice == 2:
             print("The result is " + str(obj1.substraction()))
-            yesno = str(input("Do you want new caluclation : press y/n "))
+            yesno = str(input("Do you want new caluclation : press yes/no "))
         elif choice == 3:
             print("The result is " + str(obj1.multiplication()))
-            yesno = str(input("Do you want new caluclation : press y/n "))
+            yesno = str(input("Do you want new caluclation : press yes/no "))
         elif choice == 4:
             print("The result is " + str(obj1.division()))   
-            yesno = str(input("Do you want new caluclation : press y/n "))  
+            yesno = str(input("Do you want new caluclation : press yes/no "))  
         else:
             print("Invalid choice. Choose one of the operations on the list")
-            yesno = str(input("Do you want new caluclation : press y/n "))  
+            yesno = str(input("Do you want new caluclation : press yes/no "))  
             
-        if  yesno == "y":
+        if  yesno == "yes":
             while choice != 0:
                 x = int(input("Enter the first number: ")) 
                 y = int(input("Enter the second number: "))
@@ -53,5 +55,5 @@ while choice != 0:
                     print("The result is " + str(obj1.division()))     
                 else:
                     print("Invalid choice. Choose one of the operations on the list")
-        elif yesno == "n":
+        elif yesno == "no":
             break
