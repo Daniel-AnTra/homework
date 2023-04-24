@@ -22,4 +22,5 @@ jobs:
         python-version: 3.x
     
     - name: Run calculator script
-      run: python GitHub-Actions/calculator-v2.py
+       run: python GitHub-Actions/calculator-v2.py ${{random-uuid}} ${{random-int}} ${{random-int}} ${{random-choice:["add", "subtract", "multiply", "divide"]}}
+       shell: bash
