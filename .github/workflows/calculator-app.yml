@@ -10,5 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run calculator-v2.py
-      run: python GitHub-Actions/calculator-v2.py ${{random-uuid}} ${{random-int}} ${{random-int}} ${{random-choice:["add", "subtract", "multiply", "divide"]}}
-      shell: bash
+      run: |
+        python GitHub-Actions/calculator-v2.py ${{ choice }} ${{ x }} ${{ y }}
+      env:
+        choice: ${{ random.choice(["add", "subtract", "multiply", "divide"]) }}
+        x: ${{ random.randint(-1000, 1000) }}
+        y: ${{ random.randint(-1000, 1000) }}
