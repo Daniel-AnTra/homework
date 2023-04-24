@@ -1,20 +1,25 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Calculator Workflow
+name: Calculator
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Install Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.9'
-    - name: Run calculator-v2.py
-      run: python GitHub-Actions/calculator-v2.py add 2 3
+        python-version: 3.x
+    
+    - name: Run calculator script
+      run: python GitHub-Actions/calculator-v2.py
