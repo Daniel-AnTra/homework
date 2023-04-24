@@ -18,4 +18,4 @@ jobs:
         python-version: '3.9'
     - name: Run tests
       run: |
-        python Homework4/calculator.py
+        python GitHub-Actions/calculator-v2.py
