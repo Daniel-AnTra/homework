@@ -17,4 +17,4 @@ jobs:
       with:
         python-version: '3.9'
     - name: Run calculator-v2.py
-      run: python GitHub-Actions/calculator-v2.py
+      run: python GitHub-Actions/calculator-v2.py add 2 3
