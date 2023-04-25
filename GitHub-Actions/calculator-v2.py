@@ -14,7 +14,7 @@ class Calculator:
         return x / y
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="A simple calculator")
+    parser = argparse.ArgumentParser(description="A simple calculator!")
     parser.add_argument("operation", choices=["add", "subtract", "multiply", "divide"], help="operation to perform")
     parser.add_argument("x", type=float, help="first operand")
     parser.add_argument("y", type=float, help="second operand")
